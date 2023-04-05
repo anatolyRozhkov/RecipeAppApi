@@ -440,7 +440,7 @@ class PrivateRecipeApiTests(TestCase):
         s2 = RecipeSerializer(r2)
         s3 = RecipeSerializer(r3)
 
-        params = {'ingredients': f'{ingredient1.id}, {ingredient2.id}'}
+        params = {'ingredients': f'{ingredient1.id},{ingredient2.id}'}
         res = self.client.get(RECIPES_URL, params)
 
         self.assertIn(s1.data, res.data)
