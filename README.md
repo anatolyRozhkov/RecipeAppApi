@@ -24,3 +24,5 @@ docker-compose run --rm app sh -c "python manage.py startapp user"
 
 View API
 http://127.0.0.1:8000/api/docs/
+
+sudo chmod -R 777 fergana_api
